@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html >
+<head>
+  <meta charset="UTF-8">
+  <title>Polygon Game</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+      <link rel="stylesheet" href="css/bootstrap.css">    
+
+      <link rel="stylesheet" href="css/style.css">
+
+	  <link href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.css" rel="stylesheet">  
+</head>
+
+<body>
+<div id="index">
+  <i class="fa fa-cogs fa-3x" aria-hidden="true" style="color: white" id="config" onclick="config()"></i>
+
+  <canvas id="canvas"></canvas>
+  <div id="text">
+    <h1>polygon game</h1>
+  </div>
+  <input type="text" id="pointnum">
+  <div class='container'>
+	 <button class='pulse-button' onclick="start()">start</button>
+  </div>
+
+</div>
+
+<div id="parttwo" style="display: none">
+  <canvas id="demo-canvas2" width="600" height="500"></canvas>
+  <canvas id="demo-canvas3" width="600" height="500"></canvas>
+  <i class="fa fa-fast-backward fa-2x" aria-hidden="true" id = "back" onclick="history_back()"></i>
+  <i class="fa fa-play-circle fa-3x" aria-hidden="true" id = "hint" onclick="showBest()"></i>
+
+  <!-- <button id = "back" onclick="history_back()">Back</button> -->
+</div>
+
+  <div id="partone" style="display: none">
+    <div class="row" id = "partone">
+      <div class="col-md-6">
+        <canvas id="demo-canvas" width="650" height="400" class="col-xs-12" ></canvas>
+      </div>
+      <div class = "col-md-6">
+        <table class="table">
+  
+          <thead>
+            <tr>
+              <th style="color: white;">point</th>
+              <th style="color: white;">operaction</th>
+            </tr>
+          </thead>
+          <tbody id ="tbody"> 
+      
+          </tbody>
+        </table>
+      </div>
+
+
+    </div>
+    
+  <div class="gui">
+    <div class="gui-row">
+      <label class="gui-label" for="slider.shapeMargin">Shape Margin</label>
+      <input class="gui-input" id="slider.shapeMargin" value="0" min="0" max="50" type="range" />
+      <label class="gui-value" id="value.shapeMargin">0</label>
+    </div>
+    <div class="gui-row">
+      <label class="gui-label" for="slider.shapePadding">Shape Padding</label>
+      <input class="gui-input" id="slider.shapePadding" value="0" min="0" max="50" type="range" />
+      <label class="gui-value" id="value.shapePadding">0</label>
+    </div>
+  </div>
+
+  <i id = "backward" class="fa fa-backward fa-3x" aria-hidden="true"  onclick="self.location='index.html'"></i>
+   <i id = "forward" class="fa fa-forward fa-3x" aria-hidden="true" onclick="getValue()"></i>
+ 
+</div>
+
+
+
+
+
+
+<script src="js/index.js"></script>
+<script type="text/javascript" src="js/draw.js"></script>
+<script src="js/algorithm.js"></script>
+<script src="js/game.js"></script>
+
+</body>
+</body>
+</html>

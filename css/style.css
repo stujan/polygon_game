@@ -1,0 +1,189 @@
+body {
+  background: #222;
+  margin: 0rem;
+  min-height: 100vh;
+  font-family: Futura, sans-serif;
+}
+
+#canvas, #text {
+  position: absolute;
+  display: block;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+
+
+
+#text {
+  min-height: 80vh;
+  width: 100vw;
+  color: #fff;
+  text-transform: uppercase;
+  font-size: 8vmin;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  text-align: center;
+}
+
+#text h1 {
+  opacity: 0.9;
+}
+
+#pointnum{
+  position: absolute;
+  top: 65%;
+  left: 50%;
+  border:0;
+  border-bottom:1 solid black;
+  background:#222;
+  color: white;
+
+}
+
+#config{
+  color: white;
+  position: absolute;
+  top: 5%;
+  left: 90%;
+}
+
+.container {
+  width: 200px;
+  height: 100%;
+  position: absolute;
+  top: 80%;
+  left: 50%;
+  -webkit-perspective: 1000;
+  -webkit-backface-visibility: hidden;
+}
+
+.pulse-button {
+
+
+  z-index: 1;
+  margin-left: -50px;
+  margin-top: -50px;
+  display: block;
+  width: 100px;
+  height: 100px;
+  font-size: 1.3em;
+  font-weight: light;
+  font-family: 'Trebuchet MS', sans-serif;
+  text-transform: uppercase;
+  text-align: center;
+  line-height: 100px;
+  letter-spacing: -1px;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  background: #5a99d4;
+  cursor: pointer;
+  box-shadow: 0 0 0 0 rgba(90, 153, 212, 0.5);
+  -webkit-animation: pulse 1.5s infinite;
+}
+
+.pulse-button:hover {
+  -webkit-animation: none;
+}
+
+@-webkit-keyframes pulse {
+  0% {
+    -moz-transform: scale(0.9);
+    -ms-transform: scale(0.9);
+    -webkit-transform: scale(0.9);
+    transform: scale(0.9);
+  }
+  70% {
+    -moz-transform: scale(1);
+    -ms-transform: scale(1);
+    -webkit-transform: scale(1);
+    transform: scale(1);
+    box-shadow: 0 0 0 50px rgba(90, 153, 212, 0);
+  }
+  100% {
+    -moz-transform: scale(0.9);
+    -ms-transform: scale(0.9);
+    -webkit-transform: scale(0.9);
+    transform: scale(0.9);
+    box-shadow: 0 0 0 0 rgba(90, 153, 212, 0);
+  }
+}
+#demo-canvas {
+    margin: 10px;
+    cursor: default;
+    background-color: #222;
+}
+
+#demo-canvas2 {
+    margin: 10px;
+    cursor: default;
+    background-color: #222;
+}
+#demo-canvas3 {
+    margin: 10px;
+    cursor: default;
+    background-color: #222;
+}
+
+
+.gui {
+    display: table;
+}
+
+.gui-row {
+    display: table-row;
+}
+
+.gui-label {
+    display: table-cell;
+    text-align: end;
+    margin: 1em;
+    width: 200px;
+    color: white;
+}
+
+.gui-input {
+    display: table-cell;
+    margin: 1em;
+}
+
+.gui-value {
+    color: white;
+    display: table-cell;
+    margin: 1em;
+}
+
+
+#back{
+  left:25%;
+  top:80%;
+  color: white;
+  position: absolute;
+}
+#hint{
+  left:75%;
+  top:80%;
+  color: white;
+  position: absolute;   
+}
+#backward{
+  left:3%;
+  top:90%;
+  position: absolute;
+  color: white
+}
+#forward{
+  left:95%;
+  top:90%;
+  position: absolute;
+  color: white
+}
+
